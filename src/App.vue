@@ -1,32 +1,67 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+	<div id="app">
+		<AppHeader></AppHeader>
+		<SettingsBar></SettingsBar>
+		<GameTable></GameTable>
+		<ActionBar></ActionBar>
+	</div>
 </template>
 
+<script>
+import AppHeader from "@/components/AppHeader.vue";
+import GameTable from "@/components/GameTable.vue";
+import SettingsBar from "@/components/SettingsBar.vue";
+import ActionBar from "@/components/ActionBar.vue";
+export default {
+	name: "App",
+	components: { AppHeader, GameTable, SettingsBar, ActionBar },
+	props: {},
+	data() {
+		return {
+			appTitle: "Roll some dice",
+			subtitle:
+				"Click the roll button, select the dice you want to keep, click the roll button."
+		};
+	},
+	methods: {},
+	computed: {},
+	watch: {},
+	created() {},
+	mounted() {},
+	updated() {},
+	destroyed() {}
+};
+</script>
+
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700&display=swap");
+
+html,
+body {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0 auto;
+	width: 100vw;
+	font-family: "Dosis", sans-serif;
+	height: 100%;
+}
+
+body {
+}
+
+* {
+	touch-action: manipulation;
+	box-sizing: border-box;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 0;
+	display: grid;
+	grid-template-rows: 100px 75px 1fr 50px;
+	height: fit-content;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 </style>
