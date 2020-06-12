@@ -1,8 +1,8 @@
 <template>
-	<footer class="footer">
+	<div class="action-bar">
 		<button class="rollButton">Roll</button>
 		<button name="nextPlayerButton" class="nextPlayerButton">Next Player</button>
-	</footer>
+	</div>
 </template>
 
 <script>
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style scoped>
-.footer {
+.action-bar {
 	position: sticky;
 	bottom: 0;
 	left: 0;
@@ -41,7 +41,7 @@ export default {
 	border-top: 2px solid #616375f5;
 }
 
-.footer button {
+.action-bar button {
 	height: 30px;
 	background: #ffffffd4;
 	color: #4c4d5a;
@@ -53,11 +53,15 @@ export default {
 	outline: none;
 	cursor: pointer;
 	min-width: max-content;
-	transition: 0.3s;
+	box-shadow: 0 0 8px 1px inset rgba(128, 128, 128, 0.341);
+
+	transition: 0.15s ease-out;
 }
 
-.footer button:active {
-	transform: scale(1.1);
+.action-bar button:active {
+	box-shadow: 0 0 12px 1px inset rgba(68, 68, 68, 0.808);
+	transform: scale(0.9);
+	/* transform: scale(1.1); */
 	background: #ffffff;
 }
 

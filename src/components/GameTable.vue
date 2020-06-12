@@ -3,15 +3,18 @@
 		<div class="scoreDisplay"></div>
 		<div class="display-container container1">
 			<h3 class="table-label">Active Dice</h3>
-			<ul class="rollDisplay"></ul>
+			<div class="rollDisplay">
+				<dice></dice>
+			</div>
 		</div>
 	</section>
 </template>
 
 <script>
+import Dice from "@/components/Dice";
 export default {
 	name: "GameTable",
-	components: {},
+	components: { Dice },
 	props: {},
 	data() {
 		return {
@@ -34,7 +37,7 @@ export default {
 	text-align: center;
 	margin-bottom: 15px;
 	background-color: rgba;
-	background: rgb(33, 74, 112);
+	background: rgb(158, 107, 39);
 	padding: 5px;
 }
 
@@ -45,9 +48,10 @@ export default {
 		"s s"
 		"r r";
 	grid-template-rows: 40px 1fr;
-	background: rgb(53, 107, 158);
+	background: rgb(218, 189, 58);
 	color: white;
-	height: 435px;
+	min-height: 435px;
+	max-height: 100%;
 }
 
 .scoreDisplay {

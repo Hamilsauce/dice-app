@@ -12,6 +12,7 @@ import AppHeader from "@/components/AppHeader.vue";
 import GameTable from "@/components/GameTable.vue";
 import SettingsBar from "@/components/SettingsBar.vue";
 import ActionBar from "@/components/ActionBar.vue";
+
 export default {
 	name: "App",
 	components: { AppHeader, GameTable, SettingsBar, ActionBar },
@@ -52,6 +53,7 @@ body {
 * {
 	touch-action: manipulation;
 	box-sizing: border-box;
+	user-select: none;
 }
 
 #app {
@@ -60,7 +62,7 @@ body {
 	padding: 0;
 	display: grid;
 	grid-template-rows: 100px 75px 1fr 50px;
-	height: fit-content;
+	/* height: fit-content; */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
